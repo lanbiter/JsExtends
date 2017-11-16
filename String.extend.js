@@ -139,3 +139,14 @@ String.prototype.toDate = function (char) {
     }
     return mDate;
 }
+
+//判断是否以某个字符串开头  
+String.prototype.startWith = function (s) {  
+    return this.indexOf(s) == 0  
+}  
+
+//判断是否以某个字符串结束  
+String.prototype.endWith = function (s) {  
+    var d = this.length - s.length;  
+    return (d >= 0 && this.lastIndexOf(s) == d)  
+}  
